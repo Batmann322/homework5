@@ -54,7 +54,16 @@
     <main>
         <section class="title d-flex hero ">
             <h1 class="title-h1">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-            <button class="button" type="button">Замовити послугу</button>
+            <button data-modal-open class="button" type="button">Замовити послугу</button>
+            <div class="bacdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="close" data-modal-close>
+                        <svg class="modal-clos" width="11px" height="11px">
+                            <use href="./images/symbol-defs.svg#icon-Vector"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </section>
 
         <section class="container section">
@@ -103,12 +112,26 @@
         </section>
 
         <section class="container">
-
             <h2 class="title-h2">Чим ми займаємося</h2>
-            <ul class="d-flex">
-                <li class="doing-item"><img src="./images/tablet.jpg" alt="клавіатура" width="370" height="294"></li>
-                <li class="doing-item"><img src="./images/smartphone.jpg" alt="ноутбук" width="370" height="294"></li>
-                <li class="doing-item"><img src="./images/tablet color.jpg" alt="планшет" width="370" height="294"></li>
+            <ul class="d-flex ">
+                <li class="doing-item">
+                    <div class="text">
+                        <img src="./images/tablet.jpg" alt="клавіатура" width="370" height="294">
+                        <p class="label">Десктопні додатки</p>
+                    </div>
+                </li>
+                <li class="doing-item">
+                    <div class="text">
+                        <img src="./images/smartphone.jpg" alt="ноутбук" width="370" height="294">
+                        <p class="label">Мобільні додатки</p>
+                    </div>
+                </li>
+                <li class="doing-item">
+                    <div class="text">
+                        <img src="./images/tablet color.jpg" alt="планшет" width="370" height="294">
+                        <p class="label">Дизайнерські рішення</p>
+                    </div>
+                </li>
             </ul>
         </section>
 
@@ -356,7 +379,7 @@
             </li>
             </div>
     </footer>
-
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
