@@ -64,6 +64,7 @@ body {
 
 .list-itam>a {
     color: #212121;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-itam>a:hover,
@@ -77,6 +78,22 @@ body {
 
 .list-itam:not(:last-child) {
     margin-right: 50px;
+}
+
+.selected {
+    position: relative;
+}
+
+.selected::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -190%;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
 }
 
 .contacts {
@@ -108,11 +125,13 @@ body {
 .mail {
     color: var(--teal);
     margin-right: 50px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .tel {
     color: var(--teal);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -217,6 +236,10 @@ body {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+}
+
+.close:hover {
+    cursor: pointer;
 }
 
 .title-list {
@@ -337,6 +360,7 @@ body {
     margin-bottom: 30px;
     border-radius: 50%;
     color: #AFB1B8;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon {
@@ -365,6 +389,7 @@ body {
     fill: #AFB1B8;
     width: 170px;
     height: 92px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-item:not(:last-child) {
@@ -429,6 +454,7 @@ body {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     color: #FFFFFF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item:not(:last-child) {
@@ -464,6 +490,7 @@ body {
     background-color: #F5F4FA;
     border: 0px;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigait {
@@ -485,6 +512,9 @@ body {
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
     padding-bottom: 15px;
+
+
+
 }
 
 .nav-itame:hover {
@@ -522,4 +552,34 @@ body {
 
 .prtf-list>li {
     margin: 13px;
+}
+
+
+.owerlay {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.owerlay:hover .product-overlay {
+    transform: translateY(0);
+
 }
